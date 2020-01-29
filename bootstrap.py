@@ -35,14 +35,24 @@ for i in range(0,1000):
 	beta_3 = np.append(betas_i[2],beta_3)
 	beta_4 = np.append(betas_i[3],beta_4)
 
+
 plt.subplot(2,2,1)
 plt.hist(beta_1)
+plt.title('mean = {}'.format(str(round(np.mean(beta_1), 2))) + ' std = {}'.format(str(round(np.std(beta_1), 2))))
+plt.xlabel('beta_1')
 plt.subplot(2,2,2)
 plt.hist(beta_2)
+plt.title('mean = {}'.format(str(round(np.mean(beta_2), 2))) + ' std = {}'.format(str(round(np.std(beta_2), 2))))
+plt.xlabel('beta_2')
 plt.subplot(2,2,3)
 plt.hist(beta_3)
+plt.title('mean = {}'.format(str(round(np.mean(beta_3), 2))) + ' std = {}'.format(str(round(np.std(beta_3), 2))))
+plt.xlabel('beta_3')
 plt.subplot(2,2,4)
 plt.hist(beta_4)
+plt.title('mean = {}'.format(str(round(np.mean(beta_4), 2))) + ' std = {}'.format(str(round(np.std(beta_4), 2))))
+plt.xlabel('beta_4')
+plt.subplots_adjust(wspace=0.55, hspace = 0.55)
 
-plt.show()
+plt.savefig('bootstrap.png')
 
